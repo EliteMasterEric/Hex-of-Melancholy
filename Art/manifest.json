@@ -1,0 +1,12 @@
+{
+    "name": "Hex of Melancholy",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/EliteMasterEric/HexOfMelancholy",
+    "description": "Adds a new Hex to the game.",
+    "dependencies": [
+        "bbepis-BepInExPack-5.4.2122",
+        "RiskofThunder-R2API_Core-5.3.0",
+        "RiskofThunder-R2API_Items-1.0.8",
+        "RiskofThunder-R2API_Language-1.1.0"
+    ]
+}

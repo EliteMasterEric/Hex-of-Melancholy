@@ -2,6 +2,8 @@ using BepInEx;
 using BepInEx.Logging;
 using R2API;
 
+[assembly: HG.Reflection.SearchableAttribute.OptIn]
+
 namespace HexOfMelancholy
 {
     public static class PluginInfo
@@ -25,10 +27,15 @@ namespace HexOfMelancholy
         // The Awake() method is run at the very start when the game is initialized.
         public void Awake()
         {
+            Instance = this;
+
             // Init our logging class so that we can properly log for debugging
             Log.Init(Logger);
+            PluginLogger = new PluginLogger(Logger);
 
+            Assets.Initialize();
             Items.Initialize();
+            Hooks.Initialize();
         }
     }
 

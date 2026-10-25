@@ -400,4 +400,4 @@ FodyWeavers.xsd
 ## CUSTOM
 
 # Exclude build DLLs.
-Coroner/include/*.dll
+HexOfMelancholy/include/*.dll

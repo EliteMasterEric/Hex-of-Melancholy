@@ -7,13 +7,13 @@ namespace HexOfMelancholy
 {
     public class Items
     {
-
+        public static ItemDef hexMelancholy;
+        
         public static void Initialize()
         {
             HexMelancholyAsHexItem();
         }
 
-        private static ItemDef hexMelancholy;
         private static void HexMelancholyAsHexItem()
         {
             hexMelancholy = ScriptableObject.CreateInstance<ItemDef>();
@@ -25,31 +25,32 @@ namespace HexOfMelancholy
             hexMelancholy.canRemove = true;
             hexMelancholy.hidden = false;
 
-            UsePlaceholderModel(hexMelancholy);
+            hexMelancholy.pickupIconSprite = Assets.hexMelancholyIcon;
+            hexMelancholy.pickupModelPrefab = Assets.hexMelancholyPrefab;
 
             ItemAPI.Add(new CustomItem(hexMelancholy, BuildPlaceholderDisplayRules()));
         }
 
         private static void SetItemTierToHex(ItemDef itemDef)
         {
-            SetItemTierByPath(itemDef, "ROR2/DLC4/Common/ItemTierDefs/HexDef.asset");
+            SetItemTierByPath(itemDef, "RoR2/DLC4/HexDef.asset");
         }
 
         private static void SetItemTierToHallowed(ItemDef itemDef)
         {
-            SetItemTierByPath(itemDef, "ROR2/DLC4/Common/ItemTierDefs/CursedTierDef.asset");
+            SetItemTierByPath(itemDef, "RoR2/DLC4/CursedTierDef.asset");
         }
 
         private static void SetItemTierToPage(ItemDef itemDef)
         {
-            SetItemTierByPath(itemDef, "ROR2/DLC4/Common/ItemTierDefs/PageTierDef.asset");
+            SetItemTierByPath(itemDef, "RoR2/DLC4/PageTierDef.asset");
         }
 
         private static void SetItemTierByPath(ItemDef itemDef, string path)
         {
             #pragma warning disable Publicizer001
             itemDef._itemTierDef = Addressables.LoadAssetAsync<ItemTierDef>(path).WaitForCompletion();
-            #pragma warning restore Publicize
+            #pragma warning restore Publicizer001
         }
 
         private static void UsePlaceholderModel(ItemDef itemDef)
