@@ -1,4 +1,4 @@
-# [Hex of Melancholy](https://github.com/EliteMasterEric/HexOfMelancholy) Changelog
+# [Hex of Melancholy](https://github.com/EliteMasterEric/Hex-Of-Melancholy) Changelog
 
 All notable changes to this project will be documented in this file.
 
