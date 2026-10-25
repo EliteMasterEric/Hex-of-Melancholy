@@ -1,7 +1,7 @@
 {
     "name": "Hex of Melancholy",
     "version_number": "1.0.0",
-    "website_url": "https://github.com/EliteMasterEric/HexOfMelancholy",
+    "website_url": "https://github.com/EliteMasterEric/Hex-Of-Melancholy",
     "description": "Adds a new Hex to the game.",
     "dependencies": [
         "bbepis-BepInExPack-5.4.2122",
