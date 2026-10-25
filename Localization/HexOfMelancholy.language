@@ -2,18 +2,14 @@
   "strings": {
     "ELITEMASTERERIC_MELANCHOLY_NAME": "Hex of Melancholy",
     "ELITEMASTERERIC_MELANCHOLY_PICKUP": "Makes you feel <style=cIsUtility>blue</style>... Cleanse this Hex in a Hallowed Shrine.",
-    "ELITEMASTERERIC_MELANCHOLY_DESC": "Impairs your vision with a <style=cIsUtility>blue</style> overlay.",
+    "ELITEMASTERERIC_MELANCHOLY_DESC": "Impairs your vision with a <style=cIsUtility>blue</style> overlay <style=cStack>(intensity increases per stack)</style>.",
     "ELITEMASTERERIC_MELANCHOLY_LORE": "Feeling kinda down? Well, tough luck."
-  },
-
-  "fr": {
-    "ELITEMASTERERIC_MELANCHOLY_NAME": "French Hex of Melancholy",
   },
 
   "en": {
     "ELITEMASTERERIC_MELANCHOLY_NAME": "Hex of Melancholy",
     "ELITEMASTERERIC_MELANCHOLY_PICKUP": "Makes you feel <style=cIsUtility>blue</style>... Cleanse this Hex in a Hallowed Shrine.",
-    "ELITEMASTERERIC_MELANCHOLY_DESC": "Impairs your vision with a <style=cIsUtility>blue</style> overlay.",
+    "ELITEMASTERERIC_MELANCHOLY_DESC": "Impairs your vision with a <style=cIsUtility>blue</style> overlay <style=cStack>(intensity increases per stack)</style>.",
     "ELITEMASTERERIC_MELANCHOLY_LORE": "Feeling kinda down? Well, tough luck."
   }
 }

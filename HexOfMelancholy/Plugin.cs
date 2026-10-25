@@ -35,7 +35,6 @@ namespace HexOfMelancholy
 
             Assets.Initialize();
             Items.Initialize();
-            Hooks.Initialize();
         }
     }
 

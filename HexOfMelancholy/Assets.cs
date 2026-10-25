@@ -11,7 +11,8 @@ namespace HexOfMelancholy
         static AssetBundle bundle;
 
         public static Sprite hexMelancholyIcon;
-        public static GameObject hexMelancholyPrefab;
+        public static GameObject hexMelancholyDisplay;
+        public static GameObject hexMelancholyPickup;
 
         public static void Initialize()
         {
@@ -23,7 +24,8 @@ namespace HexOfMelancholy
                 Log.Info(string.Join(", ", Assets.bundle.GetAllAssetNames()));
 
                 hexMelancholyIcon = bundle.LoadAsset<Sprite>("assets/bundles/melancholy/items/melancholy/texicon.png");
-                hexMelancholyPrefab = bundle.LoadAsset<GameObject>("assets/bundles/melancholy/items/melancholy/melancholy.prefab");
+                hexMelancholyDisplay = bundle.LoadAsset<GameObject>("assets/bundles/melancholy/items/melancholy/displaymelancholy.prefab");
+                hexMelancholyPickup = bundle.LoadAsset<GameObject>("assets/bundles/melancholy/items/melancholy/pickupmelancholy.prefab");
             }
         }
     }

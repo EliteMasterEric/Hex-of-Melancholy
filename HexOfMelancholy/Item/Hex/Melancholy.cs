@@ -21,8 +21,6 @@ namespace HexOfMelancholy
 
         private void OnEnable()
         {
-            Plugin.Instance.PluginLogger.LogInfo($"Hex of Melancholy equipped ({this.stack} stack)");
-
             bool isCurrentPlayer = body.hasEffectiveAuthority && body.isPlayerControlled;
             if (!isCurrentPlayer) return;
 
@@ -40,11 +38,21 @@ namespace HexOfMelancholy
             volumeComponent.weight = 1.0f;
             volumeComponent.sharedProfile = profile;
 
-            // Intensity based on stack count.
-            MelancholyBehavior.grading.postExposure.Override(-0.1f * (stack - 1));
-            MelancholyBehavior.grading.contrast.Override(10.0f * stack);
-
             volumeObject.SetActive(true);
+        }
+
+        public override void OnInventoryRefresh()
+        {
+            if (volumeObject == null) return;
+            
+            Plugin.Instance.PluginLogger.LogInfo($"Hex of Melancholy equipped ({stack} stacks)");
+
+            // Intensity based on stack count.
+            grading.postExposure.Override(0.0f + (-0.15f * (stack - 1)));
+            grading.contrast.Override(10.0f + (20.0f * (stack - 1)));
+
+            // Grading gets cached, so we have to re-calculate it.
+            PostProcessVolume.DispatchVolumeSettingsChangedEvent();
         }
 
         private void OnDisable()
